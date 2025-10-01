@@ -20,16 +20,16 @@ const albums = [
 
 const merch = [
   {
-    nombre: "Photobook RM",
+    nombre: "PHOTO-FOLIO Me, Myself, and RM: Entirety",
     precio: 20,
     image_url:
-      "https://cdn.shopify.com/s/files/1/0268/4321/collections/photobook.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5aa2069c25bf02363bf5c7c4/1661310497649-SPUPAMPCJYZZ5WFMOFBI/rm-special-photo-folio-entirety-product-1.jpg",
   },
   {
-    nombre: "PostCard Katseye",
-    precio: 10,
+    nombre: "Lightstick Katseye",
+    precio: 50,
     image_url:
-      "https://cdn.shopify.com/s/files/1/0268/4321/collections/postcard.jpg",
+      "https://www.kpoptown.com/176856-medium_default/-pre-order-katseye-official-light-stick.jpg",
   },
 ];
 
