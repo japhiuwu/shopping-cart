@@ -47,34 +47,29 @@ export default function App() {
       {/* Hero */}
       <Hero />
 
+      <div className="relative h-[300px] md:h-[450px] lg:h-[600px] overflow-hidden">
+        <img
+          className="absolute top-0 left-0 w-full h-auto min-h-full object-cover"
+          src="https://res.cloudinary.com/dr5gfo075/image/upload/v1759293978/Dise%C3%B1o_sin_t%C3%ADtulo_mzuuc4.png"
+          alt="Imagen parallax"
+          style={{ transform: `translateY(${-scrollY * 0.3}px)` }}
+        />
 
-<div className="relative h-[600px] overflow-hidden">
-  <img
-    className="absolute top-0 left-0 w-full h-auto min-h-full object-cover"
-    src="https://res.cloudinary.com/dr5gfo075/image/upload/v1759293978/Dise%C3%B1o_sin_t%C3%ADtulo_mzuuc4.png"
-    alt="Imagen parallax"
-    style={{ transform: `translateY(${-scrollY * 0.3}px)` }}
-  />
+        {/* Overlay oscuro para mejorar contraste */}
+        <div className="absolute inset-0 bg-black/35"></div>
 
-  {/* Overlay oscuro para mejorar contraste */}
-  <div className="absolute inset-0 bg-black/35"></div>
-
-  {/* Texto */}
-  <div className="absolute inset-0 flex flex-col justify-center items-center px-6 text-center">
-    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
-      Sobre Nosotros
-    </h2>
-    <p className="max-w-2xl text-lg md:text-xl text-white drop-shadow-md">
-      Bienvenido a nuestra tienda de música y merchandising. Aquí encontrarás
-      tus álbumes favoritos, merch exclusivo y todo lo que necesitas para
-      estar al día con tus artistas preferidos.
-    </p>
-  </div>
-</div>
-
-
-
-
+        {/* Texto */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center px-6 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-white drop-shadow-lg">
+            Sobre Nosotros
+          </h2>
+          <p className="max-w-2xl text-m md:text-lg lg:text-2xl text-white drop-shadow-md">
+            Bienvenido a nuestra tienda de música y merchandising. Aquí
+            encontrarás tus álbumes favoritos, merch exclusivo y todo lo que
+            necesitas para estar al día con tus artistas preferidos.q
+          </p>
+        </div>
+      </div>
 
       {/* Sección de Álbumes */}
       <section className="py-16 px-4 bg-gray-100">
