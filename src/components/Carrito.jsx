@@ -27,16 +27,19 @@ export default function Carrito() {
 
   async function fetchCarrito() {
     const carrito_id = localStorage.getItem("codigo-carrito");
-    const { data, error } = await supabase
-      .from("items_carrito")
-      .select("*, productos(*)") // hace el inner join con productos
-      .eq("carrito_id", carrito_id);
 
-    if (error) {
-      setToast(["Error cargando carrito", "d", Date.now()]);
-    } else {
-      console.log(data);
-      setProductos(data);
+    if(carrito_id){
+      const { data, error } = await supabase
+        .from("items_carrito")
+        .select("*, productos(*)") // hace el inner join con productos
+        .eq("carrito_id", carrito_id);
+  
+      if (error) {
+        setToast(["Error cargando carrito", "d", Date.now()]);
+      } else {
+        console.log(data);
+        setProductos(data);
+      }
     }
   }
 
